@@ -1,0 +1,91 @@
+/* helpers */
+.i { display: inline-block; vertical-align: middle; }
+.i-32 { width: 32px; height: 32px; }
+
+/* seção base */
+.svc { position: relative; z-index: 10; padding: 80px 24px; }
+@media (min-width: 768px){ .svc { padding: 80px 48px; } }
+.svc__container { max-width: 1120px; margin: 0 auto; }
+
+/* header */
+.svc__head { text-align: center; margin-bottom: 64px; animation: fadeInUp .6s both; }
+.svc__title {
+  font-size: clamp(40px, 6vw, 64px); font-weight: 800; margin: 0 0 12px;
+  background: linear-gradient(90deg, #fed7aa, #f9a8d4, #a78bfa);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.svc__subtitle { font-size: 18px; color: rgba(255,240,220,.75); max-width: 760px; margin: 0 auto; }
+
+/* filtros */
+.svc__filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 40px 0 48px; }
+.svc-filter {
+  padding: 12px 20px; border-radius: 999px; font-weight: 600; border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.08); color: #fff; transition: transform .2s, background .3s, box-shadow .3s;
+}
+.svc-filter:hover { background: rgba(255,255,255,.16); transform: translateY(-1px) scale(1.03); }
+.svc-filter.is-active {
+  background: linear-gradient(90deg, #fb923c, #db2777); border-color: transparent;
+  box-shadow: 0 12px 28px -12px rgba(251,146,60,.4); transform: translateY(-1px) scale(1.04);
+}
+
+/* grid */
+.svc__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+@media (min-width: 768px){ .svc__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px){ .svc__grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* cards */
+.svc-card {
+  padding: 32px; border-radius: 24px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(6px);
+  transition: transform .4s, background .4s, border-color .4s, box-shadow .4s; animation: fadeInUp .5s both;
+}
+.svc-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, rgba(251,146,60,.10), rgba(236,72,153,.10));
+  border-color: rgba(251,146,60,.35);
+  box-shadow: 0 20px 60px -24px rgba(251,146,60,.25);
+}
+
+.svc-card__icon {
+  width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center;
+  background: linear-gradient(135deg, #fb923c, #db2777);
+  margin-bottom: 18px; transition: transform .4s;
+}
+.svc-card:hover .svc-card__icon { transform: rotate(12deg); }
+
+.svc-card__title { font-size: 22px; font-weight: 800; margin: 0 0 8px; }
+.svc-card__desc { margin: 0 0 18px; color: rgba(255,240,220,.75); }
+
+.svc-card__list { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; }
+.svc-card__item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: rgba(255,240,220,.75); }
+.check { color: #fb923c; margin-top: 2px; }
+
+/* footer do card */
+.svc-card__footer { padding-top: 16px; border-top: 1px solid rgba(255,255,255,.12); }
+.svc-card__price { color: #fdba74; font-weight: 700; margin: 0 0 12px; }
+.svc-card__btn {
+  width: 100%; padding: 12px 18px; border-radius: 999px; border: none; cursor: pointer; font-weight: 700;
+  background: linear-gradient(90deg, #fb923c, #db2777); color: #fff;
+  transition: transform .2s, box-shadow .3s;
+}
+.svc-card__btn:hover { transform: scale(1.05); box-shadow: 0 14px 32px -12px rgba(251,146,60,.4); }
+
+/* CTA final */
+.svc__cta {
+  margin-top: 72px; text-align: center; padding: 48px 20px; border-radius: 24px;
+  border: 1px solid rgba(251,146,60,.3);
+  background: linear-gradient(135deg, rgba(251,146,60,.18), rgba(236,72,153,.18));
+}
+.svc__cta-title {
+  font-size: clamp(24px, 3.6vw, 36px); font-weight: 800; margin: 0 0 8px;
+  background: linear-gradient(90deg, #fed7aa, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.svc__cta-sub { color: rgba(255,240,220,.78); margin-bottom: 16px; }
+.svc__cta-btn {
+  padding: 14px 24px; border-radius: 999px; background: #fff; color: #2e1065; font-weight: 800; border: none; cursor: pointer;
+  transition: transform .2s, box-shadow .3s;
+}
+.svc__cta-btn:hover { transform: scale(1.06); box-shadow: 0 14px 32px -12px rgba(255,255,255,.7); }
+
+/* animação */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
