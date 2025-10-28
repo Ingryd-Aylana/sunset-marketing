@@ -1,16 +1,86 @@
-# React + Vite
+# ☀️ Sunset Marketing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Sunset Marketing** é uma aplicação web moderna desenvolvida com **React + Vite**, voltada para a apresentação institucional de uma agência digital criativa — com foco em performance, branding e experiências únicas.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto foi construído utilizando:
 
-## React Compiler
+- ⚛️ **React 18**
+- ⚡ **Vite**
+- 🎨 **CSS puro e modularizado** (componentes com estilos dedicados)
+- 🧭 **React Router DOM** para navegação entre páginas
+- 💎 **Lucide Icons** para ícones leves e escaláveis
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🏗️ Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+sunset-marketing/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── Navigation.jsx
+│ │ ├── Hero.jsx
+│ │ ├── Services.jsx
+│ │ ├── CTA.jsx
+│ │ ├── Footer.jsx
+│ ├── pages/
+│ │ ├── Home.jsx
+│ │ ├── ServicesPage.jsx
+│ │ ├── PortfolioPage.jsx
+│ │ ├── CasesPage.jsx
+│ │ ├── ContactPage.jsx
+│ ├── styles/
+│ │ ├── Navigation.css
+│ │ ├── Hero.css
+│ │ ├── ServicesPage.css
+│ │ ├── CTA.css
+│ │ ├── Footer.css
+│ │ ├── ContactPage.css
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
+
+lua
+Copiar código
+
+---
+
+## 🌐 Páginas
+
+| Página | Descrição |
+|--------|------------|
+| **Home** | Apresenta a agência, com destaque para o Hero e os principais serviços. |
+| **Serviços** | Exibe todos os serviços oferecidos, com filtros por categoria e CTA de orçamento. |
+| **Portfólio** | Galeria de projetos reais com métricas de sucesso e prêmios. |
+| **Cases** | Estudos de caso com resultados, depoimentos e métricas detalhadas. |
+| **Contato** | Formulário para captação de leads e mapa integrado. |
+
+🧩 Script disponíveis
+
+Desenvolvimento
+npm run dev
+
+🎨 Temas e UI
+
+Tema escuro com gradientes vibrantes
+
+Layout responsivo (mobile-first)
+
+Animações suaves com transition e @keyframes
+
+Componentização modular com CSS dedicado
+
+🧠 Próximos Passos
+
+ Adicionar backend (Node.js + Express) para recebimento de mensagens do formulário de contato.
+
+ Integração com API de e-mail (Resend / Nodemailer).
+
+🧑‍💻 Desenvolvido por
+ Este projeto é de uso livre para fins educacionais e de portfólio. Feito com ❤️ por Ingryd Aylana.
